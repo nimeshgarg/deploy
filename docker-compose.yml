@@ -2,6 +2,7 @@ version: '3.7'
 services:
   flutter:
     build:
+      context: ./
       dockerfile: ./Dockerfile
     volumes:
       - vol:/app/build/web
