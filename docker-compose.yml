@@ -4,7 +4,7 @@ services:
     image: nimeshgarg/infs3208:latest
     volumes:
       - vol:/app/build/web
-    restart: never
+    restart: no
         
   web:
     image: nginx:latest
