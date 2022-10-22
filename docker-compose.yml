@@ -4,9 +4,6 @@ services:
     image: nimeshgarg/infs3208:latest
     volumes:
       - vol:/app/build/web
-    deploy:
-      placement:
-        constraints: [node.role == manager]
         
   web:
     image: nginx:latest
@@ -16,9 +13,6 @@ services:
       - flutter
     volumes:
       - vol:/usr/share/nginx/html
-    deploy:
-      mode: replicated
-      replicas: 2
     command: ["/usr/sbin/nginx", "-g", "daemon off;"]
 
 volumes:
