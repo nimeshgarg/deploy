@@ -4,8 +4,6 @@ services:
     image: nginx:latest
     ports:
       - 80:80
-    depends_on:
-      - flutter
     volumes:
       - vol:/usr/share/nginx/html
     command: ["/usr/sbin/nginx", "-g", "daemon off;"]
