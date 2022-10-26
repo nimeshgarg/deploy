@@ -1,10 +1,5 @@
 version: '3.3'
 services:
-  flutter:
-    image: nimeshgarg/infs3208:latest
-    volumes:
-      - vol:/app/build/web
-    
   web:
     image: nginx:latest
     ports:
@@ -14,6 +9,10 @@ services:
     volumes:
       - vol:/usr/share/nginx/html
     command: ["/usr/sbin/nginx", "-g", "daemon off;"]
+  flutter:
+    image: nimeshgarg/infs3208:latest
+    volumes:
+      - vol:/app/build/web
 
 volumes:
   vol:
